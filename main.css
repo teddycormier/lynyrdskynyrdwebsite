@@ -1,44 +1,5 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="description" content="This sentence will appear under the link in search engine results.">
-	<meta name="keywords" content="list,of,words,separated,by,commas,that,describe,your,site">
-	<meta name="author" content="Your name goes here">
-
-	<!-- viewport -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- shiv which should be a shim -->
-    <!--[if lt IE 9]>
-	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	<![endif]-->
-
-	<!-- tab title -->
-	<title>Videos | Lynyrd Skynyrd</title>
-
-	<!-- favicon link -->
-	<link rel="shortcut icon" href="images/favicon.ico">
-
-	<!-- stylesheets -->
-	<link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/slicknav.css">
-	<link href="https://fonts.googleapis.com/css?family=Nova+Square" rel="stylesheet">
-
-    <!-- slicknav -->
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>   <!-- Link to jQuery Content Delivery Network - Necessary for SlickNav to work correctly -->
-    <script src="js/jquery.slicknav.min.js"></script>                     <!-- Link to the slicknav file inside the js folder - Necessary for SlickNav to work correctly -->
-
-	<!-- slicknav javascript - this javascript code will use the UL inside the nav_menu tag to build the same menu in slickNav format -->
-	<script type="text/javascript">
-    	$(document).ready(function(){
-			$('.nav_menu').slicknav({prependTo:"#mobilemenu"});
-    	});
-	</script>
-	
-<style>
-*{
+* {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
@@ -62,27 +23,6 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	color: white;
-}
-
-.article img {
-	width: 134%;
-	margin: auto;
-}
-
-.article p {
-	width: 100%;
-	margin: auto;
-	padding-top: 40px;
-	margin-left: 180px;
-}
-
-.article .sig {
-	float: left;
-	margin-left: 925px;
-	padding-top: 30px;
-	font-family: fantasy;
-	font-size: 80%;
-	padding-bottom: 50px;
 }
 
 header {
@@ -302,6 +242,41 @@ h2 {
 ******                                                                                                     ******
 ******                                                                                                     ******
 ******                                                                                                     ******
+******                                          Video Wrapper                                              ******
+******                                                                                                     ******
+******                                                                                                     ******
+******                                                                                                     ******
+*****************************************************************************************************************
+*****************************************************************************************************************
+****************************************************************************************************************/
+.videowrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+	margin: 0 auto;
+	border: 6px ridge #808080;
+	box-shadow: 5px 5px 15px 10px #660000;
+}
+.videowrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.caption p {
+	margin: 2em;
+	line-height: 1.5;
+	font-weight: bold;
+}
+
+/****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************
+******                                                                                                     ******
+******                                                                                                     ******
+******                                                                                                     ******
 ******                                          Homepage                                                   ******
 ******                                                                                                     ******
 ******                                                                                                     ******
@@ -380,7 +355,130 @@ h2 {
 	text-align: left;
 	margin-left: 2.5em;
 }
+/****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************
+******                                                                                                     ******
+******                                                                                                     ******
+******                                                                                                     ******
+******                                          Image Gallery                                              ******
+******                                                                                                     ******
+******                                                                                                     ******
+******                                                                                                     ******
+*****************************************************************************************************************
+*****************************************************************************************************************
+****************************************************************************************************************/
+/* #gallerypage {
+	background-color: rgba(0, 0, 0, 0);
+	
+}
+#gallery {
+	width: 100%;
+	margin: 0 auto;
+}
+/* Flexbox Layout for Image Gallery */
+/* .row {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0 4px;
+} */
 
+/* Create four equal columns that sits next to each other */
+/* .column {
+	flex: 25%;
+	max-width: 25%;
+	padding: 0 4px;
+}
+
+.column img {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+	border: 3px ridge silver;
+	border-radius: 10px;
+} */
+
+/****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************
+******                                                                                                     ******
+******                                                                                                     ******
+******                                                                                                     ******
+******                                          Discography Page                                           ******
+******                                                                                                     ******
+******                                                                                                     ******
+******                                                                                                     ******
+*****************************************************************************************************************
+*****************************************************************************************************************
+****************************************************************************************************************/
+/* #discography {
+	margin: 0 auto;
+	line-height: 1.5;
+}
+#discography h5 {
+	clear: both;
+	font-size: 250%;
+	background-color: black;
+	border: 1px solid darkred;
+	margin: 35px 0;
+	padding: 10px 1em;
+	color: white;
+	border-radius: 50px;
+	text-shadow: 1px 1px 2px red, 0 0 25px red, 0 0 5px red;
+}
+#discography h6 {
+	clear: both;
+	font-size: 200%;
+	background-color: darkred;
+	margin: 70px 0 15px;
+	padding: 10px 1em;
+	color: white;
+	border-radius: 50px;
+	text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+}
+.pimgLeft img, .pimgRight img {
+	max-width: 500px;
+	border-radius: 10px;
+	box-shadow: -10px -10px 20px #1a1a1a, 10px 10px 20px #1a1a1a;
+	width: 100%;
+}
+.pimgLeft img {
+	float: left;
+	margin: 0 1em 1em 3em;
+}
+.pimgRight img {
+	float: right;
+	margin: 0 3em 1em 1em;
+}
+.ptxtRight h7, .ptxtLeft h7 {
+	font-size: 110%;
+	color: red;
+	display: block;
+	border-bottom: 1px solid darkred;
+	margin: 1em .25em 1em;	
+	padding: .5em;	
+}
+.ptxtRight p, .ptxtLeft p, .ptxtLeft ol, .ptxtRight ol {
+	font-size: 90%;
+	margin: 1em 2.5em 1em;
+}
+.ptxtLeft ol, .ptxtRight ol {
+	margin-left: 5em;
+} */
+
+/****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************
+******                                                                                                     ******
+******                                                                                                     ******
+******                                                                                                     ******
+******                                          Footer                                                     ******
+******                                                                                                     ******
+******                                                                                                     ******
+******                                                                                                     ******
+*****************************************************************************************************************
+*****************************************************************************************************************
+****************************************************************************************************************/
 footer {
 	clear: both;
 	width: 100%;
@@ -397,6 +495,54 @@ footer p {
 	text-align: center;
 }
 
+/****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************
+******                                                                                                     ******
+******                                                                                                     ******
+******                                                                                                     ******
+******                                          Hide SlickNav in                                           ******
+******                                          full-screen view                                           ******
+******                                                                                                     ******
+******                                                                                                     ******
+******                                                                                                     ******
+*****************************************************************************************************************
+*****************************************************************************************************************
+****************************************************************************************************************/
+.slicknav_menu {
+	display: none;
+}
+
+
+
+
+
+
+
+
+/****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************
+******                                                                                                     ******
+******                                                                                                     ******
+******                                                                                                     ******
+******                                          MEDIA QUERIES                                              ******
+******                                                                                                     ******
+******                                                                                                     ******
+******                                                                                                     ******
+*****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************
+*****************************************************************************************************************
+******                                          Up to 1215px                                               ******
+*****************************************************************************************************************
+****************************************************************************************************************/
 @media only screen and (max-width: 1215px) {
 	
 	/* remove the sidebar from the homepage and make the rest of the page full width */
@@ -408,24 +554,7 @@ footer p {
 		width: 99%;
 		margin: 0 auto;
 	}
-
-	.article img {
-		float: none;
-		display: block;
-		margin: 0 auto;
-		padding: 1em 0;
-		max-width: 100%;
-	}
-
-.article p {
-	padding-top: 40px;
-	float: left;
-}
-
-.article .sig {
-	display: none;
-}
-header img {
+	header img {
 		float: none;
 		display: block;
 		margin: 0 auto;
@@ -452,28 +581,7 @@ header img {
 		display: block;
 		margin: 0 auto;
 	}
-
-.article img {
-	width: auto;
-	margin: auto;
-	float: left;
-}
-
-.article p {
-	width: 100%;
-	margin: auto;
-	padding-top: 40px;
-	float: left;
-}
-
-.article .sig {
-	float: left;
-	padding-top: 30px;
-	font-family: fantasy;
-	font-size: 80%;
-	padding-bottom: 50px;
-}
-header img {
+	header img {
 		float: none;
 		display: block;
 		margin: 0 auto;
@@ -521,7 +629,6 @@ header img {
 		font-size: 120%;
 		text-align: center;
 	}
-
 	
 	/*  Remove float from section and increase width to 100%  */
 	section {
@@ -623,26 +730,6 @@ header img {
 		border-top: 1px solid darkred;
 		margin-bottom: 15px;
 	}
-	.article img {
-	width: auto;
-	margin: auto;
-	float: left;
-}
-
-.article p {
-	width: 100%;
-	margin: auto;
-	padding-top: 40px;
-	float: left;
-}
-
-.article .sig {
-	float: left;
-	padding-top: 30px;
-	font-family: fantasy;
-	font-size: 80%;
-	padding-bottom: 50px;
-}
 
 }
 /****************************************************************************************************************
@@ -659,81 +746,11 @@ header img {
 		border: 0;
 		border-radius: 0;
 	}
-
-	.article img {
-	width: auto;
-	margin: auto;
-	float: left;
+	header img {
+		float: none;
+		display: block;
+		margin: 0 auto;
+		padding: 1em 0;
+		max-width: 60%;
+	}
 }
-
-.article p {
-	width: 100%;
-	margin: auto;
-	padding-top: 40px;
-	float: left;
-}
-
-.article .sig {
-	float: left;
-	padding-top: 30px;
-	font-family: fantasy;
-	font-size: 80%;
-	padding-bottom: 50px;
-}
-}
-</style>
-
-</head>
-
-<body>
-
-	<header class="clearfix">
-        <a href="index.html"><img src=images/headerimage.png></a>
-        <h1><a href="index.html">Members: Gary Rossington, Rickey Medlocke, Johnny Van Zant, Michael Cartellone, Mark Matejka, Peter Keys, Keith Christopher</a></h1>
-	</header>
-
-    <nav id="mobilemenu"></nav>
-	<nav class="nav_menu">
-    	<ul>
-			<li><a href="index.html">Home</a></li>
-        	<li><a href="gallery.html">Gallery</a></li>
-        	<li><a href="videos.html">Videos</a></li>
-    	</ul>
-	</nav>
-
-	<section class="article">
-	<img src="images/lynyrdskynyrdbandphoto.jpg">
-	<p>The legacy began some 41 years ago in Jacksonville, Florida, and halted for a decade by the 1977 plane crash that killed three band members, including Ronnie Van Zant and Steve Gaines. Since then, the band tragically lost Allen Collins, Billy Powell, Leon Wilkeson and Hughie Thomasson, yet Lynyrd Skynyrd rocks on with original member Gary Rossington joined by Johnny Van Zant, Rickey Medlocke, Mark “Sparky” Matejka, Michael Cartellone, Johnny Colt, Peter Keys, Dale Krantz Rossington and Carol Chase.
-		<br>
-		<br>
-	The rock and roll powerhouse continually tours, this summer heading out on their second run with Bad Company. 2014 marks the 8th year for their annual Simple Man Cruise, a four day voyage filled with the best music in Southern Rock including an outdoor beach show featuring Lynyrd Skynyrd for the first time in the cruise’s history.
-		<br>
-		<br>
-	And so Skynyrd stands, “still unbroken.” “People may say, ‘they need the money,’ well I don’t think any of us need the money,” Van Zant says. “It’s just that we love the music, it’s bigger than the money, it’s not even about that any more. We have to make a living, sure, but it’s about the legacy of Lynyrd Skynyrd, and what it stands for, what the fans are all about. There’s nothing like getting out there playing a great show with Skynyrd and seeing people love this music.”
-		<br>
-		<br>
-	Adds Rossington, “We’re still standing, still keeping the music going. We wanted to do the guys who aren’t with us any more proud, and keep the name proud, too.”
-		<br>
-		<br>	
-	With a catalog of over 60 albums, sales beyond 30 million worldwide and their beloved classic American rock anthem “Sweet Home Alabama” having over two million downloaded ringtones, Rock & Roll Hall of Famers Lynyrd Skynyrd remains a cultural icon that appeals to all generations.</p>
-
-
-	<div class="sig">
-		<p>-LynyrdSkynyrd.com</p>
-	</div>
-
-	</section>
-
-	<script>
-		window.onload = function() {
-			var d = new Date();
-			document.getElementById("copyright").innerHTML = d.getFullYear();
-		}
-	</script>
-
-	<footer>
-		<p>&copy; <span id="copyright"></span> Teddy Cormier Productions</p>
-	</footer>
-
-</body>
-</html>

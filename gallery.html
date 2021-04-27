@@ -118,12 +118,19 @@
     }
 
     /* Responsive layout - makes a two column-layout instead of four columns */
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 850px) {
     .column {
     -ms-flex: 50%;
     flex: 50%;
     max-width: 50%;
-    }
+	}
+	header img {
+		float: none;
+		display: block;
+		margin: 0 auto;
+		padding: 1em 0;
+		max-width: 60%;
+	}
     }
 
     /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
@@ -132,8 +139,227 @@
     -ms-flex: 100%;
     flex: 100%;
     max-width: 100%;
-    }
-    }
+	}
+	header img {
+		float: none;
+		display: block;
+		margin: 0 auto;
+		padding: 1em 0;
+		max-width: 60%;
+	}
+
+    @media only screen and (max-width: 1215px) {
+	
+	/* remove the sidebar from the homepage and make the rest of the page full width */
+	.bookmarks {
+		display: none;
+	}
+	#homepage, #discography {
+		float: none;
+		width: 99%;
+		margin: 0 auto;
+	}
+	header img {
+		float: none;
+		display: block;
+		margin: 0 auto;
+		padding: 1em 0;
+		max-width: 60%;
+	}
+
+}
+
+/****************************************************************************************************************
+*****************************************************************************************************************
+******                                          Up to 850px                                                ******
+*****************************************************************************************************************
+****************************************************************************************************************/
+@media only screen and (max-width: 850px) {
+	
+	/* image gallery - drop down from 4 columns to 3 columns */
+	.column {
+		flex: 33.3%;
+		max-width: 33.3%;
+	}
+	.pimgLeft img, .pimgRight img {
+		float: none;
+		display: block;
+		margin: 0 auto;
+	}
+	header img {
+		float: none;
+		display: block;
+		margin: 0 auto;
+		padding: 1em 0;
+		max-width: 60%;
+	}
+	
+}
+
+/****************************************************************************************************************
+*****************************************************************************************************************
+******                                          Up to 767px                                                ******
+*****************************************************************************************************************
+****************************************************************************************************************/
+@media only screen and (max-width: 767px) {
+	
+	/*  Hide the navigation menu and display the slicknav compact menu  */
+	.nav_menu {
+		display: none;
+	}
+	.slicknav_menu {
+		display: block;
+		background-color: black !important;
+	}
+	.slicknav_menu ul li a {
+		color: red !important;
+		font-size: 120% !important;
+	}
+	
+	/*  Increase body and main width and decrease font size  */
+	body, main {
+		width: 100%;
+		font-size: 85%;
+	}
+	
+	/*  Removed float from header image, display as block and auto margins to center in display  */
+	header img {
+		float: none;
+		display: block;
+		margin: 0 auto;
+		padding: 1em 0;
+		max-width: 60%;
+	}
+	h1 {
+		font-size: 120%;
+		text-align: center;
+	}
+	
+	/*  Remove float from section and increase width to 100%  */
+	section {
+		float: none;
+		width: 100%;
+		margin: 1em 0 2em;
+	}
+	
+	/*  Hide the bookmarks sidebar  */
+	.bookmarks {
+		display: none;
+	}
+	
+	/*  Increase width of article and div to 100%, remove side margins and side padding and remove border radius  */
+	article, div {
+		width: 100%;
+		margin: 0 0 2em;
+		padding: 2em 0;
+		border-radius: 0;
+	}
+	
+	/*  Remove border and box shadow from videos and resize to 100% width  */
+	.videowrapper {
+		border: 0;
+		box-shadow: none;
+		width: 100%;
+	}
+	
+	/*  reset the "twocol" class to one column  */
+	.twocol {
+		font-size: 80%;
+		column-count: 1;
+	}
+	
+	/*  Gallery page - reset to 2 columns  */
+	.column {
+		flex: 50%;
+		max-width: 50%;
+		padding: 0;
+	}
+	.row {
+		padding: 0;
+	}
+	
+	/*  homepage image, remove border, border radius and box shadow and side margins  */
+	#homepage img {
+		display: block;
+		max-width: 1080px;
+		width: 100%;
+		margin: 5px auto;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+	}
+	#homepage div {
+		margin: 0 auto;
+		padding-bottom: 2em;
+		border: none;
+		border-radius: 0;
+	}
+	
+	.pimgLeft img, .pimgRight img {
+		border-radius: 0;
+		box-shadow: none;
+	}
+	.ptxtLeft, .ptxtRight {
+		width: 100%;
+		margin: 0;
+	}
+	.ptxtLeft p, .ptxtRight p {
+		padding: 0 1em;		
+	}
+	#cornerBtn {
+		left: 0px;
+		bottom: 0px;
+	}
+	#discography h5 {
+		font-size: 150%;
+		margin: 15px 0;
+		padding: 5px .5em;
+		border-radius: 0;
+		border-top: 1px solid darkred;
+		border-bottom: 1px solid darkred;
+		border-left: 0;
+		border-right: 0; 
+	}
+	#discography h6 {
+		font-size: 150%;
+		margin: 15px 0;
+		padding: 5px .5em;
+		border-radius: 0;
+	}
+	#top20songs {
+		column-count: 1;
+		width: 90%;
+		margin: 0 auto;
+	}
+	#top20songs ol {
+		border-top: 1px solid darkred;
+		margin-bottom: 15px;
+	}
+
+}
+/****************************************************************************************************************
+*****************************************************************************************************************
+******                                          Up to 600px                                                ******
+*****************************************************************************************************************
+****************************************************************************************************************/
+@media (max-width: 600px) {
+	.column {
+		flex: 100%;
+		max-width: 100%;
+	}
+	.column img {
+		border: 0;
+		border-radius: 0;
+	}
+	header img {
+		float: none;
+		display: block;
+		margin: 0 auto;
+		padding: 1em 0;
+		max-width: 60%;
+	}
+}
+}
 
 .nav_menu {
     border-bottom: 3px ridge #f0f0f5;
